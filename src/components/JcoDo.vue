@@ -12,6 +12,11 @@
 </template>
 
 <script>
+
+function Capitalize (aString) {
+  return aString.charAt(0).toUpperCase() + aString.slice(1)
+}
+
 export default {
   name: 'JcoDo',
   data () {
@@ -26,11 +31,12 @@ export default {
     },
     addTodo () {
       // Add new todo to the todos array
-      this.todos.push({ text: this.newTodo })
+      this.todos.push({ text: Capitalize(this.newTodo) })
       // and clear the input field
       this.newTodo = ''
     },
     editTodo (index) {
+      // TODO: This should be more robust than a simplistic prompt
       var newDo = prompt('Change this todo: ', this.todos[index].text)
       this.todos[index].text = newDo
     }
@@ -57,7 +63,7 @@ i.remove {
   color: red;
 }
 .jcodo-container input {
-  width: 200px;
+  width: 260px;
   font-size: 14pt;
 }
 </style>
