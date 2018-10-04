@@ -20,6 +20,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Lato');
 #app {
   font-family: 'Lato', sans-serif;
+  font-size: 14pt;
 }
 #app h1 {
   margin: 0;

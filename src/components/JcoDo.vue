@@ -3,7 +3,9 @@
     <p>I need to <input type="text" v-model="newTodo" placeholder="do something and press enter" @keyup.enter="addTodo"/></p>
     <ul>
       <li v-for="(todo, index) in todos" :key="todo.id">
-        <i class="far fa-times-circle remove" @click="removeTodo(index)"></i> {{ todo.text }}
+        <i class="fas fa-pencil-alt" @click="editTodo(index)"></i>
+        <i class="far fa-times-circle remove" @click="removeTodo(index)"></i>
+        {{ todo.text }}
       </li>
     </ul>
   </div>
@@ -27,6 +29,10 @@ export default {
       this.todos.push({ text: this.newTodo })
       // and clear the input field
       this.newTodo = ''
+    },
+    editTodo (index) {
+      var newDo = prompt('Change this todo: ', this.todos[index].text)
+      this.todos[index].text = newDo
     }
   }
 }
@@ -38,7 +44,6 @@ export default {
   /* border: 1px solid red; */
 }
 ul {
-  font-size: 12pt;
   list-style-type: none;
   padding: 0 10px;
 }
@@ -53,5 +58,6 @@ i.remove {
 }
 .jcodo-container input {
   width: 200px;
+  font-size: 14pt;
 }
 </style>
