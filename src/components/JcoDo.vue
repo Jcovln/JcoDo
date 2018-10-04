@@ -1,8 +1,12 @@
 <template>
-<div>
-  <h1>JcoDo</h1>
-  <p>{{ msg }}</p>
-</div>
+  <div>
+    <h2>Inside JcoDo element</h2>
+    <ul>
+      <li v-for="todo in todos" :key="todo.id">
+        {{ todo.text }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -10,7 +14,11 @@ export default {
   name: 'JcoDo',
   data () {
     return {
-      msg: 'Welcome to your JcoDo List!'
+      todos: [
+        { text: 'Item 1' },
+        { text: 'Item 2' },
+        { text: 'Item 3' }
+      ]
     }
   }
 }
