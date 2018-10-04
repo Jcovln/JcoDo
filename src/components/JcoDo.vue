@@ -1,8 +1,8 @@
 <template>
   <div class="jcodo-container">
     <ul>
-      <li v-for="todo in todos" :key="todo.id">
-        <i class="far fa-times-circle remove"></i> {{ todo.text }}
+      <li v-for="(todo, index) in todos" :key="todo.id">
+        <i class="far fa-times-circle remove" @click="removeTodo(index)"></i> {{ todo.text }}
       </li>
     </ul>
   </div>
@@ -18,6 +18,11 @@ export default {
         { text: 'Item 2' },
         { text: 'Item 3' }
       ]
+    }
+  },
+  methods: {
+    removeTodo(index) {
+      this.todos.splice(index, 1);
     }
   }
 }
