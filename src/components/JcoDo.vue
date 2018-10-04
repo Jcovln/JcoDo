@@ -1,5 +1,6 @@
 <template>
   <div class="jcodo-container">
+    <p>I need to <input type="text" v-model="newTodo" placeholder="do something and press enter" @keyup.enter="addTodo"/></p>
     <ul>
       <li v-for="(todo, index) in todos" :key="todo.id">
         <i class="far fa-times-circle remove" @click="removeTodo(index)"></i> {{ todo.text }}
@@ -13,16 +14,19 @@ export default {
   name: 'JcoDo',
   data () {
     return {
-      todos: [
-        { text: 'Item 1' },
-        { text: 'Item 2' },
-        { text: 'Item 3' }
-      ]
+      newTodo: '',
+      todos: []
     }
   },
   methods: {
-    removeTodo(index) {
-      this.todos.splice(index, 1);
+    removeTodo (index) {
+      this.todos.splice(index, 1)
+    },
+    addTodo () {
+      // Add new todo to the todos array
+      this.todos.push({ text: this.newTodo })
+      // and clear the input field
+      this.newTodo = ''
     }
   }
 }
@@ -46,5 +50,8 @@ i:hover {
 }
 i.remove {
   color: red;
+}
+.jcodo-container input {
+  width: 200px;
 }
 </style>
