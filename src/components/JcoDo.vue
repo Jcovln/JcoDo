@@ -1,9 +1,8 @@
 <template>
-  <div>
-    <h2>Inside JcoDo element</h2>
+  <div class="jcodo-container">
     <ul>
       <li v-for="todo in todos" :key="todo.id">
-        {{ todo.text }}
+        <i class="far fa-times-circle remove"></i> {{ todo.text }}
       </li>
     </ul>
   </div>
@@ -26,7 +25,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.jcodo-container {
+  /* border: 1px solid red; */
+}
 ul {
+  font-size: 12pt;
   list-style-type: none;
+  padding: 0 10px;
+}
+ul li {
+  margin: 10px 0;
+}
+i:hover {
+  cursor: pointer;
+}
+i.remove {
+  color: red;
 }
 </style>

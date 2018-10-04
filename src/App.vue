@@ -17,7 +17,11 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Lato');
 #app {
-
+  font-family: 'Lato', sans-serif;
+}
+#app h1 {
+  margin: 0;
 }
 </style>
