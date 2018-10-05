@@ -3,7 +3,7 @@
     <p>I need to <input type="text" id="in_todo" v-model="newTodo" placeholder="type something and press enter" @keyup.enter="addTodo"/></p>
     <ul>
       <li v-for="(todo, index) in todos" :key="todo.id">
-        <i class="fas fa-pencil-alt" @click="editTodo(index)"></i>
+        <i class="fas fa-pencil-alt edit" @click="editTodo(index)"></i>
         <i class="far fa-times-circle remove" @click="removeTodo(index)"></i>
         {{ todo.text }}
       </li>
@@ -68,6 +68,9 @@ ul li {
 }
 i:hover {
   cursor: pointer;
+}
+i.edit {
+  color: #535353;
 }
 i.remove {
   color: #CF2A2A;
