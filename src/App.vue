@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <h1>JcoDo</h1>
-    <JcoDo/>
+    <div class="container">
+      <h1>Jco<span>Do</span></h1>
+      <JcoDo/>
+    </div>
   </div>
 </template>
 
@@ -20,16 +22,25 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Lato');
 body {
   background-color: #DEDEDE;
-  color: #282828;
+  background-image: linear-gradient(to right, #DC2B2B, #f06d06);
+  color: white;
 }
-
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
 #app {
   font-family: 'Lato', sans-serif;
   font-size: 14pt;
-  margin: 30px;
+  margin: 30px auto;
 }
 #app h1 {
   margin: 0;
-  color: #CF2A2A;
+  color: white;
+  text-shadow: 1.5px 1.5px 1.5px #7B0000;
+  text-align: center;
+}
+h1 span {
+  color: #FEB923;
 }
 </style>

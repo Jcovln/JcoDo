@@ -62,6 +62,8 @@ export default {
 ul {
   list-style-type: none;
   padding: 0 10px;
+  margin: 0 auto;
+  width: 360px;
 }
 ul li {
   margin: 10px 0;
@@ -70,10 +72,12 @@ i:hover {
   cursor: pointer;
 }
 i.edit {
-  color: #535353;
+  color: #FFB61A;
+  font-weight: bold;
 }
 i.remove {
-  color: #CF2A2A;
+  color: #8C0202;
+  font-weight: bold;
 }
 .jcodo-container input {
   background-color: transparent;
@@ -81,8 +85,16 @@ i.remove {
   border-bottom: 1px solid gray;
   padding: 4px;
   width: 1px;
+  color: white;
   font-size: 14pt;
   outline: none;
   transition: width 1.5s;
+}
+.jcodo-container input::placeholder {
+  /* color: #F3A277; */
+  color: #FEB923;
+}
+.jcodo-container p {
+  text-align: center;
 }
 </style>
