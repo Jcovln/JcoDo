@@ -22,11 +22,7 @@ body {
   background-color: #DEDEDE;
   color: #282828;
 }
-input[type="text"] {
-  background-color: #C6C6C6;
-  border: none;
-  padding: 4px;
-}
+
 #app {
   font-family: 'Lato', sans-serif;
   font-size: 14pt;
