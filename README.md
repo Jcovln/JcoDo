@@ -1,6 +1,10 @@
-# jcodo
+# JcoDo
 
 > A simple to-do list using the Vue.js framework
+
+## Who Can Contribute?
+To-do lists are everywhere these days, and for good reason; they exemplify a great learning opportunity for exploring 
+various aspects of programming and -- in our case -- the Vue.js framework. However, should you feel the need to contribute to this basic project, please feel free to do so!
 
 ## Build Setup
 
