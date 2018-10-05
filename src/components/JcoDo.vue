@@ -43,7 +43,12 @@ export default {
     editTodo (index) {
       // TODO: This should be more robust than a simplistic prompt
       var newDo = prompt('Change this todo: ', this.todos[index].text)
-      this.todos[index].text = newDo
+      if (newDo === '' || newDo == null) {
+        newDo = this.todos[index].text
+      } else {
+        this.todos[index].text = newDo
+      }
+      // this.todos[index].text = newDo
     }
   }
 }
