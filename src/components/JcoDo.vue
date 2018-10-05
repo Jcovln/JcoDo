@@ -1,6 +1,6 @@
 <template>
   <div class="jcodo-container">
-    <p>I need to <input type="text" id="in_todo" v-model="newTodo" placeholder="do something and press enter" @keyup.enter="addTodo"/></p>
+    <p>I need to <input type="text" id="in_todo" v-model="newTodo" placeholder="type something and press enter" @keyup.enter="addTodo"/></p>
     <ul>
       <li v-for="(todo, index) in todos" :key="todo.id">
         <i class="fas fa-pencil-alt" @click="editTodo(index)"></i>
@@ -27,7 +27,8 @@ export default {
   },
   mounted () {
     // Focus on the input field
-    document.getElementById('in_todo').focus();
+    document.getElementById('in_todo').focus()
+    document.getElementById('in_todo').style.width = '270px'
   },
   methods: {
     removeTodo (index) {
@@ -67,7 +68,13 @@ i.remove {
   color: #CF2A2A;
 }
 .jcodo-container input {
-  width: 260px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 4px;
+  width: 1px;
   font-size: 14pt;
+  outline: none;
+  transition: width 1.5s;
 }
 </style>
